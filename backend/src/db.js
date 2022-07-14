@@ -2,7 +2,7 @@ const { Sequelize } = require('sequelize');
 const path = require('path');
 const debug = require('debug')('app:sequelize'); //debug package
 
-const sequelize = new Sequelize('test_AMEX_1', 'root', '', {
+const sequelize = new Sequelize('inventory_app_1', 'root', '', {
   host: 'localhost',
   dialect: 'mysql',
 });
