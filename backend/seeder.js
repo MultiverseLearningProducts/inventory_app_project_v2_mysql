@@ -15,7 +15,7 @@ const colors = require('colors');
 
 //write our seed function -> take our json file, create rows with our data into it
 const populateDb = async () => {
-  debug('Pupulating DB...');
+  debug('Populating DB...');
   try {
 	  // reset the DB
     await sequelize.sync({force: true});
