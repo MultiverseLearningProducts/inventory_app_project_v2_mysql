@@ -1,6 +1,6 @@
-# Inventory App Practice - React and mySQL
+# Inventory App Project - mySQL, Node.JS/Express, React
 
-This is the starter code for a basic, front-to-back inventory application, used as additional practice in week 8 or 9 of the SWE 2.0 US curriculum.
+This is the starter code for a basic, front-to-back inventory application, used an alternative to the week 9 inventory application project of the SWE 2.0 curriculum.
 
 The project is expecting to use React on the frontend, with create-react-app already set up in /frontend. It uses mySQL as its query language, uses XAMPP to run the database itself, and uses phpmyadmin to give a GUI to help manage your database.
 
@@ -48,5 +48,5 @@ To run the project, use any of the following scripts that have currently been se
   `npm run dev`
 - To run the React App - frontend - only:
   `npm run client`
-- To empty and then repopulate the database with the data from /src/data/data.js:
+- To empty and then repopulate the database with the data from backend/src/data/userData.json:
   `npm run data:import`

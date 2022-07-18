@@ -31,7 +31,7 @@ brew install phpmyadmin
 
 If you haven't already, run `npm install` from the root directory to install all needed dependencies.
 
-In phpmyadmin, create a new database. Currently, the project is configured to use a a database with the name **_inventory_app_1_**, so you should name your new database this. If you wish to use a different database name, you'll need to configure this in _src/db.js_.
+In phpmyadmin, create a new database. Currently, the project is configured to use a a database with the name **\_inventory_app_project**, so you should name your new database this. If you wish to use a different database name, you'll need to configure this in _src/db.js_.
 
 This product uses environment variables with the package [dovenv](https://www.npmjs.com/package/dotenv). The .env file is set to not be pushed up to any remote repository, so you'll need to create and configure your own, local one.
 
