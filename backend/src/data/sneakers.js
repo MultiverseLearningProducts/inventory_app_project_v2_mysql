@@ -306,7 +306,7 @@ module.exports = {
             "release_date": "2018-11-26T23:59:59.000Z",
             "retail_price_cents": 100.00,
             "silhouette": "Chuck 70",
-            "story_html": "Tyler, the Creator teamed up with Foot Locker on the ‘Artist Series’ edition of the Converse Chuck 70, featuring an off-white canvas upper printed with original artwork from Wyatt Navarro. The heightened foxing that’s a signature design element of the silhouette is adorned with contrasting stripes in blue and orange. A gum rubber outsole delivers traction underfoot."
+            "story_html": "Tyler, the Creator teamed up with Foot Locker on the ‘Artist Series’ edition of the Converse Chuck 70, featuring an off-white canvas upper printed with original artwork from Wyatt Navarro. The heightened foxing thats a signature design element of the silhouette is adorned with contrasting stripes in blue and orange. A gum rubber outsole delivers traction underfoot."
         },
         {
             "brand_name": "Converse",
