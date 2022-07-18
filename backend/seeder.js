@@ -5,9 +5,11 @@ const { sneakers } = require('./src/data/sneakers')
 
 //import our database [x]
 const sequelize = require('./src/db');
+
 //import the model that we are trying to import our data into [x]
 const Shoe = require('./src/models/Shoe'); //Check the file path of this model
 
+// modules for debugging
 const debug = require('debug')('app:seeder');
 const colors = require('colors');
 
