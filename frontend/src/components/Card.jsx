@@ -1,9 +1,10 @@
 import React from "react";
 import LinkButton from './LinkButton';
+import HomePage from "../pages/HomePage";
 
 
 
-export function Card({User}) {
+export default function Card({User}) {
     return (
         <div className="card">
             <div className="img">
