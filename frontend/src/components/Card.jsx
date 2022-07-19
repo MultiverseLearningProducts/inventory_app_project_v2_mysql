@@ -4,21 +4,26 @@ import HomePage from "../pages/HomePage";
 
 
 
-export default function Card({User}) {
+ function Card({item}) {
     return (
+        
         <div className="card">
+            <h1>hi mom</h1>
             <div className="img">
-                <img src={User.profile_pic} alt="profile_pic" />
+                <img src={item.profile_pic} alt="profile_pic" />
             </div>
             <div className="card-Name">
-                <h3>{User.first_name} {User.last_name}</h3>
+                <h3>{item.first_name} {item.last_name}</h3>
              </div>
              <div className="job_title">
-                    <p>{User.job_title}</p>
+                    <p>{item.job_title}</p>
              </div>
             <div className="button">
-                <LinkButton to={`profile/${User.id}`} text={'View'}/>
+                <LinkButton to={`profile/${item.id}`} text={'View'}/>
             </div>
         </div>
     )
 }
+
+
+export default Card
