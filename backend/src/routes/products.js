@@ -10,7 +10,7 @@ const router = express.Router();
 const {
     getProductByID,
      updateProduct,
-    deleteUsertById,
+    deleteProductById,
 } = require("../controllers/products");
 
 router.get("/product/:id", getProductByID);
@@ -20,6 +20,7 @@ router.put("/product/update/:id", [
     check("description").not().isEmpty().trim(),
     check("category").not().isEmpty().trim(),
     check("image").not().isEmpty().trim(),
-] );
+],updateProduct );
+router.delete("/product/delete/:id",deleteProductById);
 
 module.exports = router;
