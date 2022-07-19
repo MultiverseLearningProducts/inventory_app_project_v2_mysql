@@ -21,7 +21,7 @@ const seed = async () => {
 
   // const userSeedPath = path.join(
   //   __dirname,
-  //   backend,
+  //   // backend,
   //   src,
   //   data,
   //   'userData.json'
@@ -33,7 +33,7 @@ const seed = async () => {
   const userBuffer = await fs.readFile(userSeedPath);
 
   // First we convert the data from buffer into a string, then we parse the JSON so it converts from string -> object
-  const  usersData  = JSON.parse(String(userBuffer));
+  const usersData = JSON.parse(String(userBuffer));
 
   //creates Show and puts it into our Show table
   const UserPromises = usersData.map((user) => User.create(user));

@@ -9,7 +9,7 @@ const User = sequelize.define('user', {
     job_title: Sequelize.STRING,
     profile_pic: Sequelize.STRING,
     location: Sequelize.STRING,
-    avatar: Sequelize.STRING
+    avatar: Sequelize.STRING,
 }); 
 
 module.exports = User;
