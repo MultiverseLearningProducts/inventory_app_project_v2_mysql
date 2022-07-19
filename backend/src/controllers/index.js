@@ -53,7 +53,6 @@ exports.getUserById = async (request, response) => {
 };
 
 
-
 exports.createUser = async (request, response) => {
     try {
       const newUser = request.body;
