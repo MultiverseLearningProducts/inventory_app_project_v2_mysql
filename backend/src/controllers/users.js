@@ -87,7 +87,7 @@ exports.updateUser = async (req, res) => {
     const updates = req.body;
 
     try {
-      const userToUpdate = await Product.findByPk(userId); //getting product to update
+      const userToUpdate = await User.findByPk(userId); 
 
       const updatedUser = await userToUpdate.update(updates);
 
