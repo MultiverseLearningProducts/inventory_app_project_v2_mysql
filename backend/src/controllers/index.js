@@ -91,3 +91,26 @@ exports.deleteUserById = async (request, response) => {
     });
   }
 };
+
+exports.updateUser = async (request, response) => {
+    const userId = request.params.id;
+    const updates = request.body;
+
+    try {
+      const userToUpdate = await User.findByPk(userId); //getting product to update
+
+      const updatedUser = await userToUpdate.update(updates);
+
+      response.status(200).json({
+        updatedUser,
+        success: true,
+        message: 'User updated successfully!',
+      });
+    } catch (error) {
+      debug(error);
+      response.status(400).json({
+        success: false,
+        message: `Unable to update - Error: ${error.message}`,
+      });
+    }
+}
