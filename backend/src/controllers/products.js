@@ -6,7 +6,7 @@ const { validationResult } = require("express-validator");
 /**
  *
  * @desc Gets Product By id
- * @route GEt api/product/:id
+ * @route GEt product/:id
  */
 
 
@@ -40,7 +40,7 @@ exports.getProductByID = async (req,res) => {
 /**
  *
  * @desc updates Product By id
- * @route Put api/product/update/:id
+ * @route Put product/update/:id
  */
 
 exports.updateProduct = async (req, res) => {
@@ -73,7 +73,7 @@ exports.updateProduct = async (req, res) => {
 
 /**
  * @desc Delete single user by id
- * @route DELETE api/product/delete/:id
+ * @route DELETE product/delete/:id
  * 
  */
 
