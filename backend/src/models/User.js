@@ -10,7 +10,6 @@ const User = sequelize.define('user', {
     profile_pic: Sequelize.STRING,
     location: Sequelize.STRING,
     avatar: Sequelize.STRING,
-    projects: Sequelize.STRING
 }); 
 
 module.exports = User;
