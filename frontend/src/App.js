@@ -14,7 +14,7 @@ function App() {
     <Router>
         <main>
           <Routes>
-            <Route path='/' element={<Users />} />
+            <Route path='/' element={<HomePage />} />
           </Routes>
       </main>
     </Router>

@@ -1,4 +1,3 @@
-import { response } from "express";
 import React, { useState, useEffect }from "react";
 import LinkButton from '../components/LinkButton';
 
@@ -21,7 +20,7 @@ function HomePage() {
 
     return (
         <div className="container">
-            
+            <h1>Hi mom</h1>
         </div>
 
     )
