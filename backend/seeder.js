@@ -15,7 +15,9 @@ const seed = async () => {
   //   data,
   //   'userData.json'
   // ); //gets the path to userData.json
+
   const userSeedPath = path.join(__dirname, 'src', 'data', 'userData.json'); //gets the path to userData.json
+
   //asynchronously reads the content in this file
   const userBuffer = await fs.readFile(userSeedPath);
   // First we convert the data from buffer into a string, then we parse the JSON so it converts from string -> object
@@ -26,4 +28,5 @@ const seed = async () => {
   await Promise.all(UserPromises);
   console.log('User database info populated!');
 };
+
 seed();
