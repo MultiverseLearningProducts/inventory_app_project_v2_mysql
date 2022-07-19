@@ -1,14 +1,12 @@
-import React from "react";
+import React from 'react';
 import LinkButton from './LinkButton';
-import HomePage from "../pages/HomePage";
 
-
-
- function Card({item}) {
+function Card({item}) {
     return (
         
         <div className="card">
             <h1>hi mom</h1>
+
             <div className="img">
                 <img src={item.profile_pic} alt="profile_pic" />
             </div>
@@ -21,6 +19,7 @@ import HomePage from "../pages/HomePage";
             <div className="button">
                 <LinkButton to={`profile/${item.id}`} text={'View'}/>
             </div>
+
         </div>
     )
 }
