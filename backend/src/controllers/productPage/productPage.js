@@ -1,12 +1,12 @@
-const sequelize = require("../db");
-const Product = require("../models/Products");
+const sequelize = require("../../db");
+const { Product } = require("../../models/Products");
 const debug = require("debug")("app:controllers");
 const { validationResult } = require("express-validator");
 
 /**
  *
  * @desc Gets Product By id
- * @route GEt product/:id
+ * @route GEt api/product/:id
  */
 
 
@@ -40,7 +40,7 @@ exports.getProductByID = async (req,res) => {
 /**
  *
  * @desc updates Product By id
- * @route Put product/update/:id
+ * @route Put api/product/update/:id
  */
 
 exports.updateProduct = async (req, res) => {
@@ -72,12 +72,12 @@ exports.updateProduct = async (req, res) => {
   };
 
 /**
- * @desc Delete single Product by id
- * @route DELETE product/delete/:id
+ * @desc Delete single user by id
+ * @route DELETE api/product/delete/:id
  * 
  */
 
-  exports.deleteProductById = async (req, res) => {
+  exports.deleteUsertById = async (req, res) => {
     const productId = req.params.id;
   
     try {
