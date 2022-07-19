@@ -13,6 +13,7 @@ const fs = require('fs').promises; //helps us get access to promises when dealin
 //import our database [x]
 //import the model that we are trying to import our data into [x]
 const db = require('./src/db'); //Check the file path
+const Product = require('./src/models/Products');
 const User = require('./src/models/User'); //Check the file path of this model
 
 //write our seed function -> take our json file, create rows with our data into it
@@ -34,6 +35,22 @@ const seed = async () => {
   await Promise.all(UserPromises);
 
   console.log('User database info populated!');
+
+  const itemSeedPath = path.join(__dirname, 'src', 'data', 'itemData.json'); //gets the path to itemData.json
+
+  //asynchronously reads the content in this file
+  const itemBuffer = await fs.readFile(itemSeedPath);
+
+  // First we convert the data from buffer into a string, then we parse the JSON so it converts from string -> object
+  const itemsData = JSON.parse(String(itemBuffer));
+
+  //creates Show and puts it into our Show table
+  const ItemPromises = itemsData.map((item) => Product.create(item));
+
+  // The Promise.all() method takes an iterable of promises as an input, and returns a single Promise that resolves to an array of the results of the input promises.
+  await Promise.all(ItemPromises);
+
+  console.log('Product database info populated!');
 };
 
 seed();

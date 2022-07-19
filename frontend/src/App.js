@@ -1,11 +1,21 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import './App.css';
+import './index.css';
+import ProductPage from './pages/productPage';
 
 function App() {
   return (
-    <div className='App'>
-      <h1>Inventory App</h1>
-    </div>
+    <Router>
+      <main>
+        <Routes>
+
+          <Route path='/product/:id' element={<ProductPage />} />
+
+        </Routes>
+
+      </main>
+
+    </Router>
   );
 }
 
