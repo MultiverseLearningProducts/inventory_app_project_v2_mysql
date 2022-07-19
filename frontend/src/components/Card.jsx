@@ -5,8 +5,6 @@ function Card({item}) {
     return (
         
         <div className="card">
-            <h1>hi mom</h1>
-
             <div className="img">
                 <img src={item.profile_pic} alt="profile_pic" />
             </div>
