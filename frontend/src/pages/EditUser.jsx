@@ -9,7 +9,7 @@ function EditUser() {
   return (
     <div className='container'>
         <div className="edit-user">
-            <h3>Edit User</h3>
+            <h3>Edit User Form</h3>
             <EditForm userId={id} />
             <LinkButton to={`/users`} text={'Back'}/>
         </div>

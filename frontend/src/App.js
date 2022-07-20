@@ -5,6 +5,7 @@ import User from './pages/User';
 import EditUser from './pages/EditUser';
 import CreateUser from './pages/CreateUser';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

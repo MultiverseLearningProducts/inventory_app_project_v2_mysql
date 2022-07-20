@@ -13,6 +13,9 @@ body {
   color: white;
   text-align: center;
   padding: 25, 25;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card {
@@ -97,7 +100,7 @@ button[type=btn] {
   text-decoration: none;
   border: 2px solid transparent;
   font-weight: bold;
-  padding: 9px 19px;
+  padding: 5px 5px;
   border-radius: 40px;
   transition: .3s;
   display: flex;
@@ -108,3 +111,18 @@ button[type=btn] {
   width:200px;
   font-size: 20px;
 }
+
+button[type=update] {
+  background-color: #722946;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 9px 19px;
+  border-radius: 30px;
+  transition: .3s;
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+}
+

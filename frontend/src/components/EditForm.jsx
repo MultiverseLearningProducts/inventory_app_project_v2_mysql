@@ -87,7 +87,6 @@ function EditForm({userId}) {
   return (
     <div className='edit-form'>
         <div className="container">
-            <h2>Details: </h2>
 
             <form onSubmit={handleSubmit}>
                 <input type='text' placeholder='Enter First Name' value={first_name} onChange={(event) => setFirstName(event.target.value)} />
@@ -96,7 +95,7 @@ function EditForm({userId}) {
                 <input type='text' placeholder='Enter Avatar URL' value={avatar} onChange={(event) => setAvatar(event.target.value)} />
                 <input type='text' placeholder='Enter Job Title' value={job_title} onChange={(event) => setJobTitle(event.target.value)} />
                 <input type='text' placeholder='Enter Location' value={location} onChange={(event) => setLocation(event.target.value)} />
-                <button>Update User</button>
+                <button type='update'>Update User</button>
             </form>
         </div>
     </div>
