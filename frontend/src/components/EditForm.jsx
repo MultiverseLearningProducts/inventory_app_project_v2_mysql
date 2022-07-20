@@ -1,6 +1,10 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 function EditForm({userId}) {
+
+    const navigate = useNavigate();
 
     const [first_name, setFirstName] = useState('');
     const [last_name, setLastName] = useState('');
@@ -26,22 +30,29 @@ function EditForm({userId}) {
     }
 
     const updateUser = async (userId, updatedUser) => {
-        try {
-            const response = await fetch(`http://localhost:8000/api/users/${userId}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'SameSite': 'None'
-                },
-                body: JSON.stringify(updatedUser)
-            });
-    
-            const data = await response.json();
-    
-            console.log('User Updated!', data);
-        } catch(error) {
-            console.log(error.message);
+        if(window.confirm('User Updated!')){
+            try {
+                const response = await fetch(`http://localhost:8000/api/users/${userId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'SameSite': 'None'
+                    },
+                    body: JSON.stringify(updatedUser)
+                });
+        
+                const data = await response.json();
+        
+                console.log('User Updated!', data);
+            } catch(error) {
+                console.log(error.message);
+            }
+
+            navigate(`/users/${userId}`);
+
         }
+
+
     }
 
 
