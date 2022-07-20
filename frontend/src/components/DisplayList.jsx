@@ -1,15 +1,16 @@
 import React from 'react'
 import ProductCard from './Display'
 
-function DisplayList({displayList}) {
+function DisplayList(displaylist) {
     return (
-        <div className="displaylist">
+        <div>
             {
-                displayList.length > 0 ? displayList.map( (cat) => 
-                <ProductCard key={cats.id} cats={cats}/>) : "No Cats in this list"
-            } 
+                displaylist.length > 0 ?
+                displaylist.map( (cat) => <ProductCard key={cat.id} cats = {cat} />)
+                : 'No Cat in this list'
+            }
         </div>
     )
 }
 
-export default DisplayList;
+export default DisplayList

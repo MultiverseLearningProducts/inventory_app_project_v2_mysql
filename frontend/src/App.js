@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import DisplayList from './components/DisplayList';
 import Products from './pages/Products';
 //import './App.css';
 
