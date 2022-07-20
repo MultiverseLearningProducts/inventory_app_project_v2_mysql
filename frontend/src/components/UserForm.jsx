@@ -63,7 +63,7 @@ function UserForm() {
                 <input type='text' placeholder='Enter Avatar URL' value={avatar} onChange={(event) => setAvatar(event.target.value)} />
                 <input type='text' placeholder='Enter Job Title' value={job_title} onChange={(event) => setJobTitle(event.target.value)} />
                 <input type='text' placeholder='Enter Location' value={location} onChange={(event) => setLocation(event.target.value)} />
-                <button>Create User</button>
+                <button type='btn'>Create User</button>
             </form>
         </div>
     </div>
