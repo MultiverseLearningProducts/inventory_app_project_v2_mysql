@@ -1,14 +1,15 @@
 const express = require('express');
 const debug = require('debug')('app:routes');
 const sequelize = require('../db');
+const Cat = require('../models/Cat');
 
 const router = express.Router();
 
 
 const {
-    getAllProducts,
-    getProductById,
+    getAllCats,
+    getCatsById,
 } = require('../controllers/index');
 
-router.get('*/products', getAllProducts);
-router.get('/products/:id', getProductById);
+router.get('*/cats', getAllCats);
+router.get('/cats/:id', getCatsById);
