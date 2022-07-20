@@ -2,22 +2,23 @@ const express = require("express");
 const debug = require("debug")("app:routes");
 
 const sequelize = require("../db");
-const User = require("../models/User");
+const { User } = require("../models/User");
 
 const { check } = require("express-validator");
+const { validationResult } = require("express-validator");
 
 const router = express.Router();
 
 const {
   getAllUsers,
-  getUsersById,
+  getUserById,
   deleteUsertById,
   createUser,
   updateUser,
 } = require("../controllers/users");
 
 router.get("*/users", getAllUsers);
-router.get("/users/:id", getUsersById);
+router.get("/users/:id", getUserById);
 router.delete("/users/:id", deleteUsertById);
 router.post(
   "/users",

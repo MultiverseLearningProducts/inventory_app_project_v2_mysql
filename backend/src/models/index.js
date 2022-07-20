@@ -1,4 +1,4 @@
-const { Product } = require("./Product");
+const { Product } = require("./Products");
 const { User } = require("./User");
 
 Product.belongsToMany(User, { through: "user_product" });
