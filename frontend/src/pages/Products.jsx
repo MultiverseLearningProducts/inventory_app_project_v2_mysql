@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ProductCard from '../components/Display';
-
-function Products() {
+import data from '../mock';
+function Products(props) {
     const [ products, setProducts ] = useState([])
 
     const getData = async () => {
@@ -22,8 +22,9 @@ function Products() {
         <div className='products'>
             <h1> Inventory App </h1>
             <div className='container'>
+                {data.description}
                 {products.length > 0 
-                ? products.map((item) => <ProductCard key={item} />)
+                ? products.map((data) => <ProductCard name={data.name} />)
                 : 'No products to display at this time...' }
             </div>
         </div>
