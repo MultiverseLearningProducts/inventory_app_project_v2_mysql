@@ -3,6 +3,7 @@ import  HomePage  from './pages/HomePage';
 import Users from './pages/Users';
 import User from './pages/User';
 import EditUser from './pages/EditUser';
+import CreateUser from './pages/CreateUser';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
             <Route path='/users' element={<Users  />} />
             <Route path='/users/:id' element={<User />} />
             <Route path='/edit-user/:id' element={<EditUser />} />
+            <Route path='/create-user' element={<CreateUser />} />
           </Routes>
       </main>
     </Router>

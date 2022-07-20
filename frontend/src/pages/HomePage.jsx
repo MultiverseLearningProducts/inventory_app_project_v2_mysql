@@ -5,6 +5,7 @@ function HomePage() {
   return (
     <div>
         <Link to='/users'>Users</Link>
+        <Link to='/create-user'>Create User</Link>
     </div>
   )
 }
