@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
+
 const sequelize = require('./src/db');
 const colors = require('colors');
 
@@ -8,6 +9,9 @@ const app = express();
 const routes = require('./src/routes/index.js')
 app.use(cors()); //allows for cross-origin resource sharing
 
+//app.get('/', (req, res) => res.send('Home'))
+
+app.use('/', routes);
 const server = app.listen(8000, () => {
   console.log(`Server is up and running on PORT: 8000`);
 });
