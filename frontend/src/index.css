@@ -10,12 +10,14 @@ body {
 
 .container {
   background-color: rgb(154, 130, 130);
-  color: white;
+  color: black;
   text-align: center;
   padding: 25, 25;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .card {
