@@ -7,7 +7,7 @@ const Cat = sequelize.define('cat', {
   name: DataTypes.STRING,
   temperament: DataTypes.STRING,
   origin: DataTypes.STRING,
-  description: DataTypes.STRING,
+  description: DataTypes.TEXT,
   life_span: DataTypes.STRING,
   adaptability: DataTypes.INTEGER,
   affection_level: DataTypes.INTEGER,
