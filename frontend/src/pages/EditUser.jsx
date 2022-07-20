@@ -11,7 +11,7 @@ function EditUser() {
         <div className="edit-user">
             <h3>Edit User Form</h3>
             <EditForm userId={id} />
-            <LinkButton to={`/users`} text={'Back'}/>
+            <LinkButton to={`/`} text={'Back'}/>
         </div>
     </div>
   )

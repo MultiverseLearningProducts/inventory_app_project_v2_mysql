@@ -25,16 +25,6 @@ function Users() {
 
     return (
       <div>
-        <div>
-          <ul>
-            <li>
-              <Link to='/' className='link-btn-user'>Home</Link>
-            </li>
-            <li>
-              <Link to="/create-user" className='link-btn-user'>Create User</Link>
-            </li>
-          </ul>
-        </div>
         <input placeholder="Enter Users Name" onChange={event => setQuery(event.target.value)} />
         <div className="container">
           {users.length > 0

@@ -7,7 +7,6 @@ body {
   margin: 0;
 }
 
-
 .container {
   background-color: rgb(154, 130, 130);
   color: black;
@@ -61,7 +60,6 @@ body {
   height: 100%;
   object-fit: scale-down;
 }
-
 
 input[type=text] {
   width: 100%;
@@ -148,7 +146,6 @@ li {
    
 }
 
-
 input[placeholder="Enter Users Name"] {
   padding: 0 20px;
   height: 40px;
@@ -163,12 +160,21 @@ input[placeholder="Enter Users Name"] {
   transition: all .30s;
   border: 3px solid #722946;
   margin-right: 50px;
-  margin-top: 20px;
-  margin-left: 800px;
+  /* margin-top: 20px; */
+  /* margin-left: 800px; */
+  margin-left: 1000px;
   margin-bottom: 20px;
 }
 
 .link-btn-user {
   text-decoration: none;
   color: #722946;
+}
+
+li.footer_element{
+  color: black;
+}
+
+footer{
+  text-align: center;
 }

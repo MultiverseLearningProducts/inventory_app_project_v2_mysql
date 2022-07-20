@@ -22,8 +22,7 @@ function UserDescriptionCard ({item}) {
       } catch (error) {
         console.log(error.message);
       }
-
-      navigate('/users')
+      navigate('/')
     }
   }
 
@@ -46,7 +45,7 @@ function UserDescriptionCard ({item}) {
       </div>
 
       <div className="description-card-actions">
-        <LinkButton to={`/users`} text={'Back'}/>
+        <LinkButton to={`/`} text={'Back'}/>
         <button className='link-btn' style={{
             border: 'none',  
             color: 'white', 

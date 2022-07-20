@@ -32,7 +32,7 @@ function UserForm() {
                 console.log(error.message);
             }
 
-            navigate('/users')
+            navigate('/')
         }
     }
 

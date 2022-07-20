@@ -8,7 +8,6 @@ function CreateUser() {
     <div className='container' style={{flexDirection: 'column'}}>
         <p>Please fill out this form to create a new user</p>
         <UserForm />
-        <LinkButton to='/users' text={'Back to Users'}/>
     </div>
   )
 }
