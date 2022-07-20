@@ -13,8 +13,10 @@ const color = require('colors');
 
 //import our database [x]
 //import the model that we are trying to import our data into [x]
+
 const db = require('./src/db'); //Check the file path
-const Cat = require('./src/models/Cat'); //Check the file path of this model
+
+const User = require('./src/models/User'); //Check the file path of this model
 
 //write our seed function -> take our json file, create rows with our data into it
 const seed = async () => {
