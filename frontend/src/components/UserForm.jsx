@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import LinkButton from '../components/LinkButton';
 
 function UserForm() {
 
@@ -74,8 +73,6 @@ function UserForm() {
                 <input type='text' placeholder='Enter Location' value={location} onChange={(event) => setLocation(event.target.value)} />
                 <button type='btn'>Create User</button>
             </form>
-
-            <LinkButton to='/users' text={'Back to Users'}/>
         </div>
     </div>
   )
