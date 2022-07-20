@@ -13,3 +13,5 @@ const {
 
 router.get('*/cats', getAllCats);
 router.get('/cats/:id', getCatsById);
+
+module.exports = router;

@@ -1,11 +1,11 @@
 import React from 'react';
 
-function ProductCard({item}) {
+function ProductCard({cats}) {
     return (
         <div className='card'>
             <h3> Product: </h3>
-            <h4> {item.name} </h4>
-            <h2> { item.description } </h2>
+            <h4>Name: {cats.name} </h4>
+            <h2>Weight: { cats.weight} </h2>
         </div>
     )
 }

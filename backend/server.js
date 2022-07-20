@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
-
+const debug = require('debug')('app:sequelize');
 const sequelize = require('./src/db');
 const colors = require('colors');
 
