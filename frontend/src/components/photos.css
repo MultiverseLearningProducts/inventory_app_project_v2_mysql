@@ -1,13 +1,27 @@
 .catPhotos{
-    height:200px;
-    width:200px;
+    max-height:200px;
+    max-width:200px;
 }
 
 .cards{
    background-color: #E0BBE4;
    border: 1px solid #bacdd8;
-   padding: 8px;
    border-radius: 12px;
-
+   width: 400px;
+   margin: 10px;
 
 }
+
+.App{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+}
+

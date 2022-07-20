@@ -23,6 +23,7 @@ function App() {
   return (
     <div className='App'>
       <h1>Inventory App</h1>
+     
       {cats.length > 0 ? <DisplayList displayList ={cats}/> : 'No cats to display'}
 
     </div>

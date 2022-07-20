@@ -1,9 +1,9 @@
 import React from 'react'
 import ProductCard from './Display'
-
+import './photos.css'
 function DisplayList({displayList}){
     return (
-        <div>
+        <div className='list'>
             {
             displayList.length > 0 ?
             displayList.map((cat) => <ProductCard key={cat.id} cats = {cat}/>)
