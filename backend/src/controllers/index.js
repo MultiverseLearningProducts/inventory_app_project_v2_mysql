@@ -7,6 +7,7 @@ const Cat = require('../models/Cat');
  * @desc Gets all cats
  * @route GET /api/cats
  */
+
 exports.getAllCats = async (req, res) => {
     try {
         const cats = await Cat.findAll();

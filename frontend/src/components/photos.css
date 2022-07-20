@@ -1,0 +1,27 @@
+.catPhotos{
+    max-height:200px;
+    max-width:200px;
+}
+
+.cards{
+   background-color: #E0BBE4;
+   border: 1px solid #bacdd8;
+   border-radius: 12px;
+   width: 400px;
+   margin: 10px;
+
+}
+
+.App{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
