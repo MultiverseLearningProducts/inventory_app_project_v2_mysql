@@ -48,10 +48,9 @@ function UserDescriptionCard ({item}) {
       <div className="description-card-actions">
         <LinkButton to={`/users`} text={'Back'}/>
         <button className='link-btn' style={{
-            border: 'none', 
-            marginLeft: '20px', 
+            border: 'none',  
             color: 'white', 
-            backgroundColor: 'red',
+            backgroundColor: '#722946',
             cursor: 'pointer'}}
             onClick={() => deleteItem(item.id)}>
               Delete User
