@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
+
 const debug = require('debug')('app:server');
 const morgan = require('morgan');
 const sequelize = require('./src/db');
@@ -20,6 +21,10 @@ sequelize
   .catch((err) => {debug(colors.red.inverse('There was an error connecting to the Database'), err);
   process.exit(1); //Terminates node servers
 });
+
+
+
+
 
 dotenv.config({ path: path.join(__dirname, '..', '.env') }); //find environment variables .env
 app.use(express.static(path.join(__dirname, 'src', 'public'))); //public

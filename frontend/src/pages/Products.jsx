@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import ProductCard from '../components/Display';
-import data from '../mock';
+import DisplayList from '../components/DisplayList';
+
 function Products(props) {
     const [ products, setProducts ] = useState([])
-
     const getData = async () => {
-        const res = await fetch(``);
+        const res = await fetch('http://localhost:8000/cats');
         const data = await res.json();
 
         console.log('Data: ', data);
@@ -22,10 +22,9 @@ function Products(props) {
         <div className='products'>
             <h1> Inventory App </h1>
             <div className='container'>
-                {data.description}
-                {products.length > 0 
-                ? products.map((data) => <ProductCard name={data.name} />)
-                : 'No products to display at this time...' }
+            {cats.length > 0 ? <DisplayList displaylist ={cats} /> 
+            : "No cats to display"}
+               
             </div>
         </div>
     )
