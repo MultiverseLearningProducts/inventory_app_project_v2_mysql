@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import LinkButton from '../components/LinkButton';
 import Card  from "../components/Card";
 import Loader from '../components/Loader';
 import { Link } from 'react-router-dom';
@@ -28,6 +27,9 @@ function Users() {
           <ul>
             <li>
               <Link to='/'>Home</Link>
+            </li>
+            <li>
+              <Link to="/create-user">Create User</Link>
             </li>
           </ul>
         </div>

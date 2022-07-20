@@ -7,7 +7,7 @@ function CreateUser() {
     <div className='container' style={{flexDirection: 'column'}}>
         <h1>Create User: </h1>
         <UserForm />
-        <LinkButton to='/' text={'Back'}/>
+        <LinkButton to='/users' text={'Back to Users'}/>
     </div>
   )
 }

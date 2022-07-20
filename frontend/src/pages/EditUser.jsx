@@ -1,5 +1,5 @@
 import React, { useParams } from 'react-router';
-import UserForm from '../components/UserForm';
+import EditForm from '../components/EditForm';
 import LinkButton from '../components/LinkButton';
 
 
@@ -10,7 +10,7 @@ function EditUser() {
     <div className='container'>
         <div className="edit-user">
             <h3>Edit User</h3>
-            <UserForm itemId={id} />
+            <EditForm userId={id} />
             <LinkButton to={`/users`} text={'Back'}/>
         </div>
     </div>

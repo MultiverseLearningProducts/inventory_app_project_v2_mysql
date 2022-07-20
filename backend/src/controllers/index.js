@@ -10,7 +10,7 @@ exports.getAllUsers = async (request, response) => {
         if(!users){
             response.status(400).json({
                 success: false,
-                message: 'No products found',
+                message: 'No users found',
             })
         } else {
             response
@@ -34,20 +34,20 @@ exports.getUserById = async (request, response) => {
         if (!user) {
         response.status(400).json({
             success: false,
-            message: 'Product not found - check the product ID',
+            message: 'User not found - check the user ID',
         });
         } else {
         response.status(200).json({
             user,
             success: true,
-            message: 'Product returned successfully',
+            message: 'User returned successfully',
         });
         }
     } catch (error) {
         debug(error);
         response.status(400).json({
         success: false,
-        message: `Product not found - Error: ${error.message}`,
+        message: `User not found - Error: ${error.message}`,
         });
     }
 };

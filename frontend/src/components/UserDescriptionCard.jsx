@@ -32,6 +32,9 @@ function UserDescriptionCard ({item}) {
       <div className="description-card-title">
         <h3>{item.first_name} {item.last_name}</h3>
       </div>
+      <div className='user-email'>
+        <p>{item.email}</p>
+      </div>
       <div className="description-card-image">
         <img src={item.avatar} alt={item.title}/>
       </div>
