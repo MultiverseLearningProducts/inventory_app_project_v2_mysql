@@ -1,13 +1,13 @@
 import React from 'react';
+import "./photos.css"
 
-function ProductCard({item}) {
+export default function ProductCard({cats}) {
     return (
-        <div className='card'>
-            <h3> Product: </h3>
-            <h4> {item.name} </h4>
-            <h2> { item.description } </h2>
+        <div className='cards'>
+            <h2> {cats.name} </h2>
+            <h4> { cats.description } </h4>
+            <img src={cats.image_url} alt={cats.name} className="catPhotos"/>
         </div>
     )
-}
 
-export default ProductCard;
+}

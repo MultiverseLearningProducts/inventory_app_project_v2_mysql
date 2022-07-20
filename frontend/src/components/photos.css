@@ -1,0 +1,13 @@
+.catPhotos{
+    height:200px;
+    width:200px;
+}
+
+.cards{
+   background-color: #E0BBE4;
+   border: 1px solid #bacdd8;
+   padding: 8px;
+   border-radius: 12px;
+
+
+}

@@ -5,7 +5,7 @@ const debug = require('debug')('app:server');
 const morgan = require('morgan');
 const sequelize = require('./src/db');
 const colors = require('colors');
-
+const dotenv = require('dotenv')
 const app = express();
 const routes = require('./src/routes/index')
 app.use(cors()); //allows for cross-origin resource sharing
@@ -20,7 +20,9 @@ sequelize
   process.exit(1); //Terminates node servers
 });
 
-
+dotenv.config({ path: path.join(__dirname, '..', '.env') }); //find environment variables .env
+app.use(express.static(path.join(__dirname, 'src', 'public'))); //public
+app.use(express.json()); //server can speak in .json
 
 
 //Routes
