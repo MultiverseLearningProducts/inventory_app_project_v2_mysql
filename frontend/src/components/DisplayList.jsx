@@ -1,13 +1,14 @@
 import React from 'react'
 import ProductCard from './Display'
+import './photos.css'
 
-function DisplayList(displaylist) {
+function DisplayList({displayList}){
     return (
-        <div>
+        <div className='list'>
             {
-                displaylist.length > 0 ?
-                displaylist.map( (cat) => <ProductCard key={cat.id} cats = {cat} />)
-                : 'No Cat in this list'
+            displayList.length > 0 ?
+            displayList.map((cat) => <ProductCard key={cat.id} cats = {cat}/>)
+            : 'No Cats In This List'
             }
         </div>
     )

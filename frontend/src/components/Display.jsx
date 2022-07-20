@@ -1,4 +1,5 @@
 import React from 'react';
+import "./photos.css"
 
 function ProductCard({cats}) {
     return (
@@ -8,6 +9,5 @@ function ProductCard({cats}) {
             <h2>Weight: { cats.weight} </h2>
         </div>
     )
-}
 
-export default ProductCard;
+}
