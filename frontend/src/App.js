@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import DisplayList from './components/DisplayList';
 import './index.css'
+
 function App() {
   const [cats, setCats] = useState([]);
 

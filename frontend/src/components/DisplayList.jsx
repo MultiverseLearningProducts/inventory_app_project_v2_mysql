@@ -1,6 +1,7 @@
 import React from 'react'
 import ProductCard from './Display'
 import './photos.css'
+
 function DisplayList({displayList}){
     return (
         <div className='list'>
@@ -10,7 +11,6 @@ function DisplayList({displayList}){
             : 'No Cats In This List'
             }
         </div>
-
     )
 }
 
