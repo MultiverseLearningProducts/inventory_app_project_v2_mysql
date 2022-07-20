@@ -41,9 +41,10 @@ function Users() {
           ? users.filter(item => {
             if (query === '') {
               return item;
-            } else if (item.first_name.toLowerCase().includes(query.toLowerCase())) {
+            } else if (item.first_name.toLowerCase().includes(query.toLowerCase()) || item.last_name.toLowerCase().includes(query.toLowerCase())) {
               return item;
             }
+            return false;
           }).map((item) => <Card key={item.id} item={item}/> )
           : <Loader />}
         </div>
