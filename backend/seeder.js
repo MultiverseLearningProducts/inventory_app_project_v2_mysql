@@ -16,7 +16,7 @@ const color = require('colors');
 
 const db = require('./src/db'); //Check the file path
 
-const User = require('./src/models/User'); //Check the file path of this model
+const Cat = require('./src/models/Cat'); //Check the file path of this model
 
 //write our seed function -> take our json file, create rows with our data into it
 const seed = async () => {
