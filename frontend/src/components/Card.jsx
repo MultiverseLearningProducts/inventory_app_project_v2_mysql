@@ -15,7 +15,7 @@ function Card({item}) {
                     <p>{item.job_title}</p>
              </div>
             <div className="button">
-                <LinkButton to={`profile/${item.id}`} text={'View'}/>
+                <LinkButton to={`/users/${item.id}`} text={'View'}/>
             </div>
 
         </div>

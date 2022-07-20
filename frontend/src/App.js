@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react';
 import './App.css';
 import  HomePage  from './pages/HomePage';
-import Card from './components/Card';
 import Users from './pages/Users';
+import User from './pages/User';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -10,7 +9,9 @@ function App() {
     <Router>
         <main>
           <Routes>
-            <Route path='/' element={<HomePage  />} />
+            <Route path='/' element={<HomePage />} />
+            <Route path='/users' element={<Users  />} />
+            <Route path='/users/:id' element={<User />} />
           </Routes>
       </main>
     </Router>

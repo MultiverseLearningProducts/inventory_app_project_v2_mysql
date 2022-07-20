@@ -27,3 +27,31 @@ body {
   margin: 20px;
   border-radius: 10px;
 }
+
+.description-card {
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  padding:30px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.description-card-title h3 {
+  font-size: 1.5rem;
+}
+
+.description-card-image {
+  height: 200;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.description-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
