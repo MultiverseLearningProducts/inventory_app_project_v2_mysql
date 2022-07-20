@@ -12,14 +12,15 @@ const fs = require('fs').promises; //helps us get access to promises when dealin
 
 //import our database [x]
 //import the model that we are trying to import our data into [x]
-const  db = require('./src/db'); //Check the file path
+const db = require('./src/db'); //Check the file path
 const User = require('./src/models/User'); //Check the file path of this model
 
 //write our seed function -> take our json file, create rows with our data into it
 const seed = async () => {
   await db.sync({ force: true }); // clear out database + tables
 
-  const userSeedPath = path.join(
+
+const userSeedPath = path.join(
     __dirname,
    // backend,
     'src',
@@ -31,7 +32,8 @@ const seed = async () => {
   const userBuffer = await fs.readFile(userSeedPath);
 
   // First we convert the data from buffer into a string, then we parse the JSON so it converts from string -> object
-  const  usersData = JSON.parse(String(userBuffer));
+
+  const usersData = JSON.parse(String(userBuffer));
 
   //creates Show and puts it into our Show table
   const UserPromises = usersData.map((user) => User.create(user));
