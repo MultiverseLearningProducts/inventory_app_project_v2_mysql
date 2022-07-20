@@ -28,10 +28,10 @@ function Users() {
         <div>
           <ul>
             <li>
-              <Link to='/'>Home</Link>
+              <Link to='/' className='link-btn-user'>Home</Link>
             </li>
             <li>
-              <Link to="/create-user">Create User</Link>
+              <Link to="/create-user" className='link-btn-user'>Create User</Link>
             </li>
           </ul>
         </div>

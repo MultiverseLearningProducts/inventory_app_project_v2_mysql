@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 function HomePage() {
   return (
     <div className='home-page'>
-        <Link to='/users'>Users</Link>
-        <Link to='/create-user'>Create User</Link>
+        <Link to='/users' className='link-btn'>Users</Link>
+        <Link to='/create-user' className='link-btn'>Create User</Link>
     </div>
   )
 }

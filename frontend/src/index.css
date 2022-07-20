@@ -167,3 +167,8 @@ input[placeholder="Enter Users Name"] {
   margin-left: 800px;
   margin-bottom: 20px;
 }
+
+.link-btn-user {
+  text-decoration: none;
+  color: #722946;
+}
