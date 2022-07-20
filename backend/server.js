@@ -5,6 +5,7 @@ const debug = require('debug')('app:server');
 const morgan = require('morgan');
 const sequelize = require('./src/db');
 const colors = require('colors');
+const dotenv = require('dotenv');
 
 const app = express();
 const routes = require('./src/routes/index')
@@ -20,12 +21,14 @@ sequelize
   process.exit(1); //Terminates node servers
 });
 
+dotenv.config({ path: path.join(__dirname, '..', '.env') }); //find environment variables .env
+app.use(express.static(path.join(__dirname, 'src', 'public'))); //public
+app.use(express.json()); //server can speak in .json
 
-
-
+const PORT = process.env.PORT || 8080;
 //Routes
 app.use('/', routes);
 
-const server = app.listen(8000, () => {
-  console.log(`Server is up and running on PORT: 8000`);
+const server = app.listen(PORT, () => {
+  console.log(`Server is up and running on PORT: ${PORT}`.green);
 });
