@@ -31,6 +31,12 @@ dotenv.config({ path: path.join(__dirname, '..', '.env') }); //find environment 
 app.use(express.static(path.join(__dirname, 'src', 'public'))); //public
 app.use(express.json()); //server can speak in .json
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 //ROUTES
 app.use('/api', routes);
 

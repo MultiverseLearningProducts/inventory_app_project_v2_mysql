@@ -9,6 +9,32 @@ const { validationResult } = require("express-validator");
  * @route GEt product/:id
  */
 
+exports.getProducts= async (req, res) => {
+
+  try {
+    const products = await Product.findAll()
+
+    if (!products) {
+      res.status(400).json({
+        success: false,
+        message: 'Products not found',
+      });
+    } else {
+      res.status(200).json({
+        products: products,
+        success: true,
+        message: 'Products returned successfully',
+      });
+    }
+  } catch (error) {
+    debug(error);
+    res.status(400).json({
+      success: false,
+      message: `Products not found - Error: ${error.message}`,
+    });
+  }
+};
+
 
 exports.getProductByID = async (req,res) => {
     const productId = req.params.id;

@@ -12,28 +12,15 @@ const fs = require('fs').promises; //helps us get access to promises when dealin
 
 //import our database [x]
 //import the model that we are trying to import our data into [x]
-<<<<<<< HEAD
-const db  = require('./src/db'); //Check the file path
-=======
 const db = require('./src/db'); //Check the file path
 const Product = require('./src/models/Products');
->>>>>>> f850eee610817b8e3809a6bb5287b2c48ecc93c4
 const User = require('./src/models/User'); //Check the file path of this model
 
 //write our seed function -> take our json file, create rows with our data into it
 const seed = async () => {
   await db.sync({ force: true }); // clear out database + tables
 
-<<<<<<< HEAD
-  const userSeedPath = path.join(
-    __dirname,
-    "src",
-    "data",
-    'userData.json'
-  ); //gets the path to userData.json
-=======
   const userSeedPath = path.join(__dirname, 'src', 'data', 'userData.json'); //gets the path to userData.json
->>>>>>> f850eee610817b8e3809a6bb5287b2c48ecc93c4
 
   //asynchronously reads the content in this file
   const userBuffer = await fs.readFile(userSeedPath);

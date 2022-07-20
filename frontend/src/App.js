@@ -1,9 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 // import './App.css';
-import Nav from "./Components/Nav";
+import Nav from "./Components/NavBar/NavBar";
 import './index.css';
+import './Components/NavBar/NavBar.css';
 import ProductPage from './Pages/ProductPage';
+import ProductsPage from './Pages/ProductsPage';
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
         <Nav />
         <Routes>
 
+          <Route path='/products' element={<ProductsPage />} />
           <Route path='/product/:id' element={<ProductPage />} />
 
         </Routes>
