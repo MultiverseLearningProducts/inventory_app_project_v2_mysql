@@ -37,7 +37,6 @@ const userSeedPath = path.join(
 
   // First we convert the data from buffer into a string, then we parse the JSON so it converts from string -> object
 
-
   const usersData = JSON.parse(String(userBuffer));
 
   //creates Show and puts it into our Show table
