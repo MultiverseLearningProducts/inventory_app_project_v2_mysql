@@ -1,6 +1,10 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
+import LinkButton from '../components/LinkButton';
 
 function UserForm() {
+
+    const navigate = useNavigate();
 
     const [first_name, setFirstName] = useState('');
     const [last_name, setLastName] = useState('');
@@ -11,20 +15,25 @@ function UserForm() {
     const [email, setEmail] = useState('');
 
     const createUser = async (newUser) => {
-        try {
-            const response = await fetch('http://localhost:8000/api/users', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(newUser)
-            });
-    
-            const data = await response.json();
-    
-            console.log('User Created!', data);
-        } catch(error) {
-            console.log(error.message);
+        
+        if(window.confirm('User Created!')){
+            try {
+                const response = await fetch('http://localhost:8000/api/users', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(newUser)
+                });
+        
+                const data = await response.json();
+        
+                console.log('User Created!', data);
+            } catch(error) {
+                console.log(error.message);
+            }
+
+            navigate('/users')
         }
     }
 
@@ -65,6 +74,8 @@ function UserForm() {
                 <input type='text' placeholder='Enter Location' value={location} onChange={(event) => setLocation(event.target.value)} />
                 <button>Create User</button>
             </form>
+
+            <LinkButton to='/users' text={'Back to Users'}/>
         </div>
     </div>
   )

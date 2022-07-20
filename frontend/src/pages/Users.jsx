@@ -44,6 +44,7 @@ function Users() {
             } else if (item.first_name.toLowerCase().includes(query.toLowerCase())) {
               return item;
             }
+            return false;
           }).map((item) => <Card key={item.id} item={item}/> )
           : <Loader />}
         </div>

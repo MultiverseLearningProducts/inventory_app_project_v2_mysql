@@ -23,7 +23,7 @@ function UserDescriptionCard ({item}) {
         console.log(error.message);
       }
 
-      navigate('/')
+      navigate('/users')
     }
   }
 
