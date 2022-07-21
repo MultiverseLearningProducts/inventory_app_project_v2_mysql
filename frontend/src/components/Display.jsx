@@ -11,3 +11,5 @@ function ProductCard({cats}) {
     )
 
 }
+
+export default ProductCard;
