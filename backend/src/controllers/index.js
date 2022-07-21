@@ -77,7 +77,7 @@ exports.deleteCatsById = async (req, res) => {
                 message: 'Cats not Found 🤔',
             });
         } else {
-            res.statu(200).json({
+            res.status(200).json({
                 deletedCat,
                 success: true,
                 message: `Cat at id: ${catId} deleted successfully`
@@ -89,5 +89,28 @@ exports.deleteCatsById = async (req, res) => {
             success: false,
             message: `Cats not found - Error: ${error.message}`
         });
+    }
+};
+
+exports.updateCat = async (req, res) => {
+    const catId = req.params.id;
+    const update = req.body;
+
+    try {
+        const catForUpdate = await Cat.findByPk(catId);
+        const completeCatUpdate = await catForUpdate.update(update);
+
+        res.status(200).json({
+            completeCatUpdate,
+            success: true,
+            message: 'Cat has been successfully updated',
+        });
+    } catch (error) {
+        debug(error);
+        res.status(400).json({
+            success: false,
+            message: `Was not able to update because of ${error.message}`,
+        });
+        
     }
 };

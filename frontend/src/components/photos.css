@@ -1,6 +1,4 @@
 .catPhotos{
-   /* max-height:200px;
-    max-width:200px;   */
      /* max-width: 200px;  */
     height: 200px;
 }
@@ -31,9 +29,7 @@
     flex-wrap: wrap;
 }
 
-button {
-   padding: 15px;
-   margin: 15px;
-   
-    
+button{
+    padding: 15px;
+    margin: 15px;
 }
