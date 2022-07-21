@@ -1,31 +1,30 @@
 import React, { useState, useEffect } from 'react'
-import ProductCard from '../components/Display';
 import DisplayList from '../components/DisplayList';
 
 function Products(props) {
-    const [ products, setProducts ] = useState([])
+    const [cats, setCats] = useState([]);
+
     const getData = async () => {
-        const res = await fetch('http://localhost:8000/cats');
-        const data = await res.json();
-
-        console.log('Data: ', data);
-        const { products } = data;
-        setProducts(products);
-        console.log('Products: ', products);
-    };
-
-    useEffect( () => {
-        getData();
-    }, []); 
-
+      const response = await fetch('http://localhost:8000/cats');
+      const data = await response.json();
+  
+      console.log('Data: ', data);
+      const { cats } = data;
+      setCats(cats);
+      console.log('Cats: ', cats);
+    }
+  
+    useEffect(() => {
+      getData();
+    }, []);
+  
     return (
-        <div className='products'>
-            <h1> Inventory App </h1>
-            <div className='container'>
-            {cats.length > 0 ? <DisplayList displaylist ={cats} /> 
-            : "No cats to display"}
-               
+        <div className='display-list-app'>
+            <div className='header'>
+                <h1>Inventory App</h1>
             </div>
+            {cats.length > 0 ? <DisplayList cats={cats} /> 
+            : "No cats to display"}
         </div>
     )
 }
