@@ -12,3 +12,140 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  font-family: cursive, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  box-sizing: border-box;
+  margin: 0; 
+}
+
+.header {
+  font-size: 30px;
+  line-height: 5em;
+}
+.catPhotos{
+ /* max-height:200px;
+  max-width:200px;   */
+   /* max-width: 200px;  */
+  height: 200px;
+  border-radius: 20px;
+}
+
+.cards{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ flex-wrap: wrap;
+ background-color: #E0BBE4;
+ border: 1px solid #bacdd8;
+ border-radius: 20px;
+ width: 400px;
+ margin: 10px;
+ font-size: 30px;
+
+}
+
+.display-list-app{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.list{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+button {
+ padding: 15px;
+ margin: 15px;
+ background-color:#E0BBE4;
+ border-radius: 15px;
+ font-size: 25px; 
+}
+
+@media screen and (max-width: 838px) {
+  .catPhotos{
+     height: 150px;
+     border-radius: 20px;
+   }
+   
+   .cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #E0BBE4;
+    border: 1px solid #bacdd8;
+    border-radius: 20px;
+    width: 300px;
+    margin: 10px;
+    font-size: 30px;
+   
+   }
+}
+     /* Media Screen for Mobile Devices */
+@media screen and (max-width: 640px) {
+  .catPhotos{
+     height: 150px;
+     border-radius: 20px;
+   }
+   
+   .cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #E0BBE4;
+    border: 1px solid #bacdd8;
+    border-radius: 20px;
+    width: 280px;
+    margin: 10px;
+    font-size: 30px;
+   
+   }
+}
+
+@media screen and (max-width: 599px) {
+  .catPhotos{
+     height: 150px;
+     border-radius: 20px;
+   }
+   
+   .cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #E0BBE4;
+    border: 1px solid #bacdd8;
+    border-radius: 20px;
+    width: 250px;
+    margin: 10px;
+    font-size: 30px;
+   
+   }
+}
+
+@media screen and (max-width: 390px) {
+  .catPhotos{
+     height: 80px;
+     border-radius: 20px;
+   }
+   
+   .cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #E0BBE4;
+    border: 1px solid #bacdd8;
+    border-radius: 20px;
+    width: 150px;
+    margin: 10px;
+    font-size: 18px;
+   
+   }
+}

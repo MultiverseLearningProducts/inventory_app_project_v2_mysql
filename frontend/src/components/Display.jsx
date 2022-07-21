@@ -1,5 +1,5 @@
 import React from 'react';
-import "./photos.css"
+//import "./photos.css"
 
 function ProductCard({cats}) {
     return (
