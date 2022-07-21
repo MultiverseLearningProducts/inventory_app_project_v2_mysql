@@ -1,6 +1,5 @@
 import React from 'react';
-import "./popup.css"
-function popUp(){
+function Product (){
     return(
         <div className='background'>
 
@@ -9,4 +8,4 @@ function popUp(){
     
 }
 
-export default popUp;
+export default Product;
