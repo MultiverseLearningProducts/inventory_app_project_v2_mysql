@@ -3,7 +3,6 @@ import ProductS from './pages/Products';
 import Product from './pages/Product';
 import Edit from './pages/Edit';
 import './index.css'
-import Product from './pages/Product';
 
 
 
