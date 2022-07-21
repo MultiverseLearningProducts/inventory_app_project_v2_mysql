@@ -1,9 +1,15 @@
 .catPhotos{
-    max-height:200px;
-    max-width:200px;
+   /* max-height:200px;
+    max-width:200px;   */
+     /* max-width: 200px;  */
+    height: 200px;
 }
 
 .cards{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   flex-wrap: wrap;
    background-color: #E0BBE4;
    border: 1px solid #bacdd8;
    border-radius: 12px;
@@ -25,3 +31,9 @@
     flex-wrap: wrap;
 }
 
+button {
+   padding: 15px;
+   margin: 15px;
+   
+    
+}
