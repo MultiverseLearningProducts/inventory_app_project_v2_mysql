@@ -1,3 +1,32 @@
+# Project name:
+## User Inventory
+This project developed as part of a group project! Our group focused on maintaining a strong git workflow and great communication. It was created with React App and it has full CRUD functionality
+
+# Technologies Used
+* HTML
+* CSS
+* JavaScript
+* React
+* Bootstrap
+* Sequelize
+* Express
+
+# Getting Started
+* click to see the code https://github.com/CodeBusters2
+* click to browse the website
+
+
+# Icebox
+* Improving on the CSS
+* Being able to create a register for the user with login / logout button and working functionality 
+
+# The Team:
+* Jo-anne https://github.com/joannembl
+* Galina  https://github.com/gkutieva
+* Daniel https://github.com/DanielSWaite190
+* Noah https://github.com/NoahSpencerCode
+
+
 # Inventory App Project - mySQL, Node.JS/Express, React
 
 This is the starter code for a basic, front-to-back inventory application, used an alternative to the week 9 inventory application project of the SWE 2.0 curriculum.
