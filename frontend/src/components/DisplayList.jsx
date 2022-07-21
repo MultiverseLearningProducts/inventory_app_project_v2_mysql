@@ -1,6 +1,6 @@
 import React from 'react'
 import ProductCard from './Display'
-import './photos.css'
+//import './photos.css'
 
 function DisplayList({cats}){
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import "./photos.css";
+//import "./photos.css";
 import popUp from '../pages/Product';
 
 function ProductCard({cats}) {
