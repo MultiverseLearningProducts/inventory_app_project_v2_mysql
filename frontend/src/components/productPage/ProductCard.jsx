@@ -2,7 +2,11 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
+<<<<<<< Updated upstream
 import LinkButton from '../productPage/LinkButton';
+=======
+import LinkButton from './LinkButton';
+>>>>>>> Stashed changes
 
 function ProductInfo ({item}) {
 
