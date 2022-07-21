@@ -63,3 +63,31 @@ exports.getCatsById = async (req ,res) => {
     }
 };
 
+exports.deleteCatsById = async (req, res) => {
+
+    const catId = req.params.id;
+
+    try{
+        const cat = await Cat.findByPk(catId);
+        const deletedCat = await cat.destroy();
+
+        if(!deletedCat){
+            res.status(400).json({
+                success: false,
+                message: 'Cats not Found 🤔',
+            });
+        } else {
+            res.statu(200).json({
+                deletedCat,
+                success: true,
+                message: `Cat at id: ${catId} deleted successfully`
+            })
+        }
+    }catch(error){
+        debug(error);
+        res.status(400).json({
+            success: false,
+            message: `Cats not found - Error: ${error.message}`
+        });
+    }
+};

@@ -13,5 +13,7 @@ const {
 
 router.get('*/cats', getAllCats);
 router.get('/cats/:id', getCatsById);
+// router.put('/cats/:id')
+// router.delete('/cats/:id')
 
 module.exports = router;
