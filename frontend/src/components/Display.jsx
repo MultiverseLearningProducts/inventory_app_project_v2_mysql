@@ -3,11 +3,14 @@ import "./photos.css"
 
 function ProductCard({cats}) {
     return (
-        <div className='card'>
-            <h3> Product: </h3>
-            <h4>Name: {cats.name} </h4>
-            <h2>Weight: { cats.weight} </h2>
+        <div className='cards'>
+            <h3>Cat:  </h3>
+            <h2>{cats.name} </h2>
+            <h4>{cats.description} </h4>
+            <img className = "catPhotos" src={cats.image_url} alt={cats.name}></img>
         </div>
     )
 
 }
+
+export default ProductCard
