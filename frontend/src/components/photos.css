@@ -1,6 +1,5 @@
 .catPhotos{
-    /* max-height:200px;
-    max-width:200px; */
+     /* max-width: 200px;  */
     height: 200px;
 }
 
@@ -17,7 +16,7 @@
 
 }
 
-.App{
+.display-list-app{
     text-align: center;
     display: flex;
     align-items: center;
@@ -34,4 +33,3 @@ button{
     padding: 15px;
     margin: 15px;
 }
-
