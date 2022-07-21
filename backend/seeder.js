@@ -22,6 +22,7 @@ const seed = async () => {
   const userBuffer = await fs.readFile(userSeedPath);
   // First we convert the data from buffer into a string, then we parse the JSON so it converts from string -> object
   const usersData = JSON.parse(String(userBuffer));
+
   //creates Show and puts it into our Show table
   const UserPromises = usersData.map((user) => User.create(user));
   // The Promise.all() method takes an iterable of promises as an input, and returns a single Promise that resolves to an array of the results of the input promises.
