@@ -14,6 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<ProductS />} />
         <Route path='/:id' element={<Product />} />
+
       </Routes>
     </Router>
 
