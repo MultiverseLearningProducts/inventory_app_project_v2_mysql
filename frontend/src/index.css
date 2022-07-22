@@ -12,12 +12,31 @@ code {
     monospace;
 }
 
-.page-not-found {
-
-  background-image: url(https://www.pngmart.com/files/22/Sad-Cat-Memes-Transparent-PNG.png);
+.pageNotFound {
+  display: flex;
+  flex-direction: column;
+  background-color: #CAD2C5;
+  width:100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.product-not-found {
-  background-image: url(https://www.pngmart.com/files/22/Sad-Cat-Memes-Transparent-PNG.png);
+.product-page {
+  display: flex;
+  flex-direction: column;
 }
 
+.home {
+  display: flex;
+  font-size: 7em;
+  background-color: #CAD2C5;
+  width: 100%;
+  height: 100%;
+}
+
+
+.description-card-actions {
+  background-color: #84A98C;
+  width: 20%;
+}

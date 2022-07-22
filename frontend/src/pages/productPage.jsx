@@ -26,7 +26,7 @@ function ProductPage() {
 
 
     return (
-        <div>
+        <div className="product-page">
             <h1> Product Details:</h1>
             <div>
             {product ? <ProductCard item={product}/> : <ProductNotFound />}
