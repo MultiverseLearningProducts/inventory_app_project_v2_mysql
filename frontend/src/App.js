@@ -17,6 +17,7 @@ function App() {
         <Route path='/:id' element={<Product />} />
         {/* <Route path='/create-cat/:id' element={<Add />} /> */}
         <Route path='/edit-cat/:id' element={<Edit />} />
+
       </Routes>
     </Router>
 
