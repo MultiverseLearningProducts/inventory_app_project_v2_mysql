@@ -1,20 +1,21 @@
-const express = require('express');
-const debug = require('debug')('app:server');
-const colors = require('colors');
-const morgan = require('morgan');
-const dotenv = require('dotenv');
-const path = require('path');
-const cors = require('cors');
-const sequelize = require('./src/db');
+const express = require("express");
+const debug = require("debug")("app:server");
+const colors = require("colors");
+const morgan = require("morgan");
+const dotenv = require("dotenv");
+const path = require("path");
+const cors = require("cors");
+const sequelize = require("./src/db");
 
-const routes = require('./src/routes/products');
+const routes = require("./src/routes/products");
+const userRoutes = require("./src/routes/users");
 
 sequelize
   .authenticate()
-  .then((res) => debug(colors.blue.inverse('Database is connected')))
+  .then((res) => debug(colors.blue.inverse("Database is connected")))
   .catch((err) => {
     debug(
-      colors.red.inverse('There was an error connecting to the database'),
+      colors.red.inverse("There was an error connecting to the database"),
       err
     );
     process.exit(1); //NODE TERMINATE SERVER
@@ -23,12 +24,12 @@ sequelize
 const app = express();
 app.use(cors());
 
-if ((process.env.MODE = 'development')) {
-  app.use(morgan('dev'));
+if ((process.env.MODE = "development")) {
+  app.use(morgan("dev"));
 }
 
-dotenv.config({ path: path.join(__dirname, '..', '.env') }); //find environment variables .env
-app.use(express.static(path.join(__dirname, 'src', 'public'))); //public
+dotenv.config({ path: path.join(__dirname, "..", ".env") }); //find environment variables .env
+app.use(express.static(path.join(__dirname, "src", "public"))); //public
 app.use(express.json()); //server can speak in .json
 
 app.use(function(req, res, next) {
@@ -38,7 +39,8 @@ app.use(function(req, res, next) {
 });
 
 //ROUTES
-app.use('/api', routes);
+app.use("/api", routes);
+app.use("/api", userRoutes);
 
 const PORT = process.env.PORT || 8000;
 

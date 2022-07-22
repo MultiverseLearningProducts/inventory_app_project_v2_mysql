@@ -1,9 +1,9 @@
- 
- import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 
 //import Product from '../../../backend/src/models/Products';
-import ProductCard from '../Components/productPage/ProductCard'
+import ProductCard from '../components/productPage/ProductCard'
+import ProductNotFound from '../components/productPage/ProductNotFound';
 
 function ProductPage() {
     const {id} = useParams();
@@ -27,10 +27,10 @@ function ProductPage() {
 
 
     return (
-        <div>
+        <div className="product-page">
             <h1> Product Details:</h1>
             <div>
-                {product ? <ProductCard item={product}/> : <>Loading...</>}
+            {product ? <ProductCard item={product}/> : <ProductNotFound />}
             </div> 
 
         </div>
