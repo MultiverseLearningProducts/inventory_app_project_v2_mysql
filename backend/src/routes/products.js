@@ -14,13 +14,13 @@ const {
 } = require("../controllers/products");
 
 router.get("/product/:id", getProductByID);
-router.put("/product/update/:id", [
+router.put("/product/:id", [
     check("title").not().isEmpty().trim(),
     check("price").not().isEmpty().trim(),
     check("description").not().isEmpty().trim(),
     check("category").not().isEmpty().trim(),
     check("image").not().isEmpty().trim(),
 ],updateProduct );
-router.delete("/product/delete/:id",deleteProductById);
+router.delete("/product/:id",deleteProductById);
 
 module.exports = router;

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 //import Product from '../../../backend/src/models/Products';
 import ProductCard from '../components/productPage/ProductCard'
+import Loader from '../components/productPage/Loader';
 
 function ProductPage() {
     const {id} = useParams();
@@ -28,7 +29,7 @@ function ProductPage() {
         <div>
             <h1> Product Details:</h1>
             <div>
-                {<ProductCard item={product}/>}
+            {product ? <ProductCard item={product}/> : <Loader />}
             </div> 
 
         </div>
