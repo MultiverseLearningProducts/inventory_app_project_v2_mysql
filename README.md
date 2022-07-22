@@ -23,7 +23,7 @@ What we have is a Cat Inventory site that is creating a multitude of cats from t
 
 ---
 
-## Demo
+!## Demo
 
 ![Add your Demo](readme_assets/screen.gif) 
 
