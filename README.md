@@ -1,4 +1,4 @@
-# Inventory App Project - mySQL, Node.JS/Express, React
+# Cat Inventory App Project - mySQL, Node.JS/Express, React (Alexander, Roohan, Greg, Joseph)
 
 This is the starter code for a basic, front-to-back inventory application, used an alternative to the week 9 inventory application project of the SWE 2.0 curriculum.
 

@@ -1,11 +1,22 @@
-import { useState, useEffect } from 'react';
-import './App.css';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import ProductS from './pages/Products';
+import './index.css'
+import Product from './pages/Product';
+
+
 
 function App() {
+
+
+
   return (
-    <div className='App'>
-      <h1>Inventory App</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<ProductS />} />
+        <Route path='/:id' element={<Product />} />
+      </Routes>
+    </Router>
+
   );
 }
 
