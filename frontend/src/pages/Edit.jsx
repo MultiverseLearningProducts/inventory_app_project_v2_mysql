@@ -1,5 +1,5 @@
 import {useState} from 'react';
-
+import './edit.css'
 export default function Edit({catId}) {
   const selectedCat = {
     adaptability: 5,
