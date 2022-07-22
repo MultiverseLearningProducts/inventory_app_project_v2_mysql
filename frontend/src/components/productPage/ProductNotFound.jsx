@@ -5,8 +5,8 @@ function ProductNotFound() {
     <div>
       <h1>Sorry Product Not Found</h1>
 
-      <div class="product-not-found"></div>
-
+      <div></div>
+      <img src={require('../../Not-Found.png')}alt ={"cat"} />
     </div>
 
   )

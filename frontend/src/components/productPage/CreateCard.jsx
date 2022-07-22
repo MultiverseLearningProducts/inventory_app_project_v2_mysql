@@ -68,7 +68,7 @@ function ProductForm() {
                 <textarea type="text" placeholder='Enter category' value={category} onChange={(event) => setCategory(event.target.value)} required></textarea>
                 <input type="text" placeholder='Enter image url' value={image} onChange={(event) => setImage(event.target.value)} required/>
                 <textarea type="text" placeholder='Enter description' value={description} onChange={(event) => setDescription(event.target.value)} required></textarea>
-                <button className='form-button'>Create Product</button>
+                <button>Create Product</button>
             </form>
 
         </div>
