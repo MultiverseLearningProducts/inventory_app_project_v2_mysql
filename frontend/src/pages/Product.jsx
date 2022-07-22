@@ -43,9 +43,9 @@ function Product(){
     },[params.id])
 
 
-
+   
     
-
+    
     document.body.style ='#bacdd8';
     if(user){
         return(
@@ -66,6 +66,6 @@ function Product(){
     }
 
     
-}
+}   
 
 export default Product;

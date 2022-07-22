@@ -84,6 +84,7 @@ button {
  font-size: 25px; 
 }
 
+
 @media screen and (max-width: 838px) {
   .catPhotos{
      height: 150px;
