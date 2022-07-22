@@ -11,6 +11,7 @@ const {
     getProductByID,
      updateProduct,
     deleteProductById,
+    createProduct
 } = require("../controllers/products");
 
 router.get("/product/:id", getProductByID);
@@ -22,5 +23,12 @@ router.put("/product/:id", [
     check("image").not().isEmpty().trim(),
 ],updateProduct );
 router.delete("/product/:id",deleteProductById);
+router.post("/product",[
+    check("title").not().isEmpty().trim(),
+    check("price").not().isEmpty().trim(),
+    check("description").not().isEmpty().trim(),
+    check("category").not().isEmpty().trim(),
+    check("image").not().isEmpty().trim(),
+],createProduct);
 
 module.exports = router;
