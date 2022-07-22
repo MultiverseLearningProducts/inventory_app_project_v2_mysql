@@ -25,7 +25,6 @@ function Product(){
 
     document.body.style ='#bacdd8';
 
-
     if(user){
         return(
             <div className='container'>
@@ -43,6 +42,6 @@ function Product(){
         }
 
     
-}
+}   
 
 export default Product;

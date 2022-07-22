@@ -21,7 +21,7 @@ function Products(props) {
     return (
         <div className='display-list-app'>
             <div className='header'>
-                <h1>Inventory App</h1>
+                <h1> Cat Inventory </h1>
             </div>
             {cats.length > 0 ? <DisplayList cats={cats} /> 
             : "No cats to display"}
