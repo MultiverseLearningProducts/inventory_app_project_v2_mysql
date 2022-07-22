@@ -92,7 +92,7 @@ exports.deleteCatsById = async (req, res) => {
     }
 };
 
-exports.updateCat = async (req, res) => {
+exports.updateCatById = async (req, res) => {
     const catId = req.params.id;
     const update = req.body;
 
@@ -112,5 +112,25 @@ exports.updateCat = async (req, res) => {
             message: `Was not able to update because of ${error.message}`,
         });
         
+    }
+};
+
+exports.createCat = async (req, res) => {
+    try{
+        const catData = req.body;
+        const catPromise = await Cat.create(catData);
+        console.log('1');
+        
+        await Promise.all([catPromise]);
+        res.status(200).json({
+            catPromise,
+            success:true,
+            message: `new cat successfully created`
+        });
+    } catch(error) {
+        res.status(400).json({
+            success:false,
+            message: console.error(`Can't create a new cat object. Error: ${error.message}`)
+        })
     }
 };
