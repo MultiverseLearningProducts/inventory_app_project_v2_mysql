@@ -1,68 +1,102 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
+import { useParams, useNavigate, Navigate} from 'react-router-dom';
 import './edit.css'
-export default function Edit({catId}) {
-  const selectedCat = {
-    adaptability: 5,
-    affection_level: 5,
-    cat_id: "abys",
-    description: "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.",
-    energy_level: 5,
-    grooming: 1,
-    health_issues: 2,
-    id: 1,
-    image_url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg",
-    life_span: "14 - 15",
-    name: "Abyssinian",
-    origin: "Egypt",
-    temperament: "Active, Energetic, Independent, Intelligent, Gentle",
-    weight: "7  -  10",
-    wikipedia_url: "https://en.wikipedia.org/wiki/Abyssinian_(cat)",
-  }
-  // let selectedCat;
-
-  const [adaptability, setAdaptability] = useState(selectedCat.adaptability);
-  const [affection_level, setAffection_level] = useState(selectedCat.affection_level);
-  const [description, setDescription] = useState(selectedCat.description);
-  const [energy_level, setEnergy_level] = useState(selectedCat.energy_level);
-  const [grooming, setGrooming] = useState(selectedCat.grooming);
-  const [health_issues, setHealth_issues] = useState(selectedCat.health_issues);
-  const [image_url, setImage_url] = useState(selectedCat.image_url);
-  const [life_span, setLife_span] = useState(selectedCat.life_span);
-  const [name, setName] = useState(selectedCat.name);
-  const [origin, setOrigin] = useState(selectedCat.origin);
-  const [temperament, setTemperament] = useState(selectedCat.temperament);
-  const [weight, setWeight] = useState(selectedCat.weight);
-  const [wikipedia_url, setWikipedia_url] = useState(selectedCat.wikipedia_url);
-
+export default function Edit() {
+  let {id} = useParams();
+  const navigate = useNavigate();
+  
+  
+  const [adaptability, setAdaptability] = useState('');
+  const [affection_level, setAffection_level] = useState('');
+  const [description, setDescription] = useState('');
+  const [energy_level, setEnergy_level] = useState('');
+  const [grooming, setGrooming] = useState('');
+  const [health_issues, setHealth_issues] = useState('');
+  const [image_url, setImage_url] = useState('');
+  const [life_span, setLife_span] = useState('');
+  const [name, setName] = useState('');
+  const [origin, setOrigin] = useState('');
+  const [temperament, setTemperament] = useState('');
+  const [weight, setWeight] = useState('');
+  const [wikipedia_url, setWikipedia_url] = useState('');
+  
   const getCat = async (catId) => {
-    const res = await fetch(`http://localhost:3000/${catId}`,{
-      headers: {
-        'SameSite': 'None'
-      }
-    });
-    // const {selectedCat} = await res.json();
-
-    setAdaptability(selectedCat.adaptability);
-    setAffection_level(selectedCat.affection_level);
-    setDescription(selectedCat.description);
-    setEnergy_level(selectedCat.energy_level);
-    setGrooming(selectedCat.grooming);
-    setHealth_issues(selectedCat.health_issues);
-    setImage_url(selectedCat.image_url);
-    setLife_span(selectedCat.life_span);
-    setName(selectedCat.name);
-    setOrigin(selectedCat.origin);
-    setTemperament(selectedCat.temperament);
-    setWeight(selectedCat.weight);
-    setWikipedia_url(selectedCat.wikipedia_url);
+    try{
+      const res = await fetch(`http://localhost:8000/cats/${catId}`,{
+        headers: {
+          'SameSite': 'None',
+        }
+      });
+      await res.json()
+      .then((res) => {
+        setAdaptability(res.cat.adaptability);
+        setAffection_level(res.cat.affection_level);
+        setDescription(res.cat.description);
+        setEnergy_level(res.cat.energy_level);
+        setGrooming(res.cat.grooming);
+        setHealth_issues(res.cat.health_issues);
+        setImage_url(res.cat.image_url);
+        setLife_span(res.cat.life_span);
+        setName(res.cat.name);
+        setOrigin(res.cat.origin);
+        setTemperament(res.cat.temperament);
+        setWeight(res.cat.weight);
+        setWikipedia_url(res.cat.wikipedia_url);
+      });
+    } catch(error) {
+      console.error(error.message);
+    };
   }
-
+  
+  const updateCat = async (catId, updatedCat) => {
+    try{
+      const res = await fetch(`http://localhost:8000/cats/${catId}`,{
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'SameSite': 'None'
+        },
+        body: JSON.stringify(updatedCat)
+      });
+      const catData = await res.json();
+      navigate(`/cats/${id}`);
+      console.log(`successfully updated cat`);
+    } catch(error) {
+      console.error(`Product did not update - Error: ${error.message}`);
+    }
+  }
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const updatedCat ={
+      adaptability,
+      affection_level,
+      description,
+      energy_level,
+      grooming,
+      health_issues,
+      image_url,
+      life_span,
+      name,
+      origin,
+      temperament,
+      weight,
+      wikipedia_url 
+    };
+    updateCat(id, updatedCat);
+  }
+  
+  useEffect(() => {
+    getCat(id)
+  },[id]);
+  
   return(
     <div className="edit-container">
       <section className="edit-form">
         <h2>Details:</h2>
 
-        <form >
+        <form onSubmit={handleSubmit}>
           Adaptability: <input type={"number"} value={adaptability} onChange={(e) => setAdaptability(e.target.value) } />
           Affection level: <input type={"number"} value={affection_level} onChange={(e) => setAffection_level(e.target.value) } />
           Description: <input type={"text"} value={description} onChange={(e) => setDescription(e.target.value) } />
@@ -82,3 +116,20 @@ export default function Edit({catId}) {
     </div>
   )
 }
+// const selectedCat = {
+//   adaptability: 5,
+//   affection_level: 5,
+//   cat_id: "abys",
+//   description: "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.",
+//   energy_level: 5,
+//   grooming: 1,
+//   health_issues: 2,
+//   id: 1,
+//   image_url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg",
+//   life_span: "14 - 15",
+//   name: "Abyssinian",
+//   origin: "Egypt",
+//   temperament: "Active, Energetic, Independent, Intelligent, Gentle",
+//   weight: "7  -  10",
+//   wikipedia_url: "https://en.wikipedia.org/wiki/Abyssinian_(cat)",
+// }
