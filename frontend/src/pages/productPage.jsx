@@ -30,7 +30,7 @@ function ProductPage() {
         <div>
             <h1> Product Details:</h1>
             <div>
-                {<ProductCard item={product}/>}
+                {product ? <ProductCard item={product}/> : <>Loading...</>}
             </div> 
 
         </div>

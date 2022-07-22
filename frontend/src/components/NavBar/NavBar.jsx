@@ -12,6 +12,7 @@ function Nav() {
     <a href="#Product-Page">Product Page</a>
     <a href="#User-Form">User Form</a>
     <a href="#Product-Form">Product Form</a>
+    {/* <input type="text" placeholder="Search.."/> */}
   </nav>
   )
 }
