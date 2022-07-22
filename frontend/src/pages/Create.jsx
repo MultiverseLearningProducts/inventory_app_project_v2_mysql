@@ -57,19 +57,19 @@ export default function Create() {
     }
     createCat(newCat);
 
-    setAdaptability("");
-    setAffection_level("");
-    setDescription("");
-    setEnergy_level("");
-    setGrooming("");
-    setHealth_issues("");
-    setImage_url("");
-    setLife_span("");
-    setName("");
-    setOrigin("");
-    setTemperament("");
-    setWeight("");
-    setWikipedia_url("");
+    setAdaptability(0);
+    setAffection_level(0);
+    setDescription(0);
+    setEnergy_level(0);
+    setGrooming(0);
+    setHealth_issues(0);
+    setImage_url('https://dummyimage.com/200x200/fff/aaa');
+    setLife_span('');
+    setName('');
+    setOrigin('');
+    setTemperament('');
+    setWeight('');
+    setWikipedia_url('');
   };
 
   const goHome = (e) => {

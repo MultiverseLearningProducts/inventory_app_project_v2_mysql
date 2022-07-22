@@ -38,8 +38,11 @@ function Product(){
                  <div className='cat'>
                      <h1>{user.name}</h1>
                      <p className='desc'>{user.description}</p>
+                     <div className='cat-btns'>
                      <Link className='product-select-btn' to={`/edit-cat/${params.id}`}>Edit</Link>
                      <Link className='product-select-btn' to='/' onClick={deleteCat}>Delete</Link>
+                     <Link className='product-select-btn' to='/' >Home</Link>
+                     </div>
                  </div>
             </div>
          )
