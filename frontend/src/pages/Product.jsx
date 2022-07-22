@@ -1,30 +1,33 @@
 import React , {useState, useEffect} from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link} from 'react-router-dom';
 import "./popup.css"
 
 function Product(){
         
-    
-
     const [user, setUser] = useState(null);
 
     const params = useParams()
-    // console.log(params);
 
     async function getUser(id) {
         const response = await fetch(`http://localhost:8000/cats/${id}`)
         const data = await response.json();
         
-        // console.log(data);
-        setUser(data);
+        setUser(data.cat);
     }
-
+    const deleteCat = async () => {
+        const res = await fetch(`http://localhost:8000/cats/${params.id}`,{
+          method: `DELETE`,
+          headers: {
+            'SameSite': 'None'
+          }
+        });
+        const deletedCat = await res.json();
+        console.log(`Cat deleted`);
+    }
 
     useEffect (() => {
         getUser(params.id);
     },[params.id])
-
-    document.body.style ='#bacdd8';
 
     if(user){
         return(
@@ -35,6 +38,8 @@ function Product(){
                  <div className='cat'>
                      <h1>{user.name}</h1>
                      <p className='desc'>{user.description}</p>
+                     <Link className='product-select-btn' to={`/edit-cat/${params.id}`}>Edit</Link>
+                     <Link className='product-select-btn' to='/' onClick={deleteCat}>Delete</Link>
                  </div>
             </div>
          )

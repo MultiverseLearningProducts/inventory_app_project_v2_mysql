@@ -59,7 +59,7 @@ export default function Edit() {
         body: JSON.stringify(updatedCat)
       });
       const catData = await res.json();
-      navigate(`/cats/${id}`);
+      navigate(`/${id}`);
       console.log(`successfully updated cat`);
     } catch(error) {
       console.error(`Product did not update - Error: ${error.message}`);
@@ -86,6 +86,11 @@ export default function Edit() {
     };
     updateCat(id, updatedCat);
   }
+
+  const goHome = (e) => {
+    e.preventDefault();
+    navigate('/');
+  }
   
   useEffect(() => {
     getCat(id)
@@ -110,7 +115,10 @@ export default function Edit() {
           Temperament: <input type={"text"} value={temperament} onChange={(e) => setTemperament(e.target.value) } />
           Weight: <input type={"text"} value={weight} onChange={(e) => setWeight(e.target.value) } />
           Wikipedia URL: <input type={"text"} value={wikipedia_url} onChange={(e) => setWikipedia_url(e.target.value) } />
-          <button className='form-button'>Update</button>
+          <div>
+            <button className='form-button' onClick={goHome}>Home</button>
+            <button className='form-button'>Save</button>
+          </div>
         </form>
       </section>
     </div>
