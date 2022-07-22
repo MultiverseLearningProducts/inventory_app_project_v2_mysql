@@ -1,52 +1,71 @@
-# Cat Inventory App Project - mySQL, Node.JS/Express, React (Alexander, Roohan, Greg, Joseph)
+# Cat Inventory 
+A CRUD operated inventory that displays a current list of cats borrowed from the [Cat API data](https://thecatapi.com/). 
 
-This is the starter code for a basic, front-to-back inventory application, used an alternative to the week 9 inventory application project of the SWE 2.0 curriculum.
 
-The project is expecting to use React on the frontend, with create-react-app already set up in /frontend. It uses mySQL as its query language, uses XAMPP to run the database itself, and uses phpmyadmin to give a GUI to help manage your database.
+
+
+## Table of contents
+
+- [Introduction](#introduction)
+- [Demo](#demo)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Features](#features)
+- [Contact](#contact)
 
 ---
 
-## To use:
+## Introduction
 
-### Set up Project:
+What we have is a Cat Inventory site that is creating a multitude of cats from the data we fetched from the Cat API. We are able to give each cat to be categorized into it's own card. Each card details itself with more information as you are able to not only edit it but add a new source yourself.
 
-- Fork the repository
-- Clone the repo down onto your local machine
-- Change directory into the correct folder
 
-### NPM
 
-To correctly install all depdendencies for all parts of the project, you'll need to install dependencies in both the root directory _and_ in /frontend.
+---
 
-- In your terminal, run:
-  `npm install`
-- Then, change directory into the frontend folder:
+## Demo
+
+![Add your Demo](readme_assets/screen.gif) 
+
+---
+
+## Technologies
+
+### Front-End
+React, React-Router, Javascript, HTML/CSS
+
+### Back-End
+Node.JS, Express, mySQL, Sequelize
+
+---
+
+## Setup
+
+To run this project, install it locally using npm:
 
 ```
-//from root directory
+$ cd ../project_name
+$ npm install
+```
+Then you're going to want to go to go inside the frontend and repeat the proccess as step 1:
 
-cd frontend
+```
+$ cd frontend
+$ npm install
+$ cd ..
+```
+Finally, you can run the whole program
+
+```
+$ npm start
 ```
 
-- Inside the frontend folder, run:
-  `npm install` again.
+---
 
-This will make sure that all dependencies are installed for both the entire project as well as the React application used for the frontend.
+## Features
 
-### Setting up the server:
+- Create a Cat Object
+- Update a Cat Object
+- Delete a Cat Object
 
-Read the README.md file located at backend/README.md for instructions on how to get the server up and running correctly.
-
-### Running the project:
-
-To run the project, use any of the following scripts that have currently been set up:
-
-- To run the entire project (uses _concurrently_ dependency to do so): `npm start`
-- To run the only the server in Node:
-  `npm run server`
-- To run the server using nodemon:
-  `npm run dev`
-- To run the React App - frontend - only:
-  `npm run client`
-- To empty and then repopulate the database with the data from backend/src/data/userData.json:
-  `npm run data:import`
+---
