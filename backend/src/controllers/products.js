@@ -67,6 +67,32 @@ exports.updateProduct = async (req, res) => {
         message: `Unable to update product - Error: ${error.message}`,
       });
     }
+  };
+
+
+  exports.createProduct = async (req, res) => {
+    const errors = validationResult(req);
+  
+    if (!errors.isEmpty()) {
+      res.status(400).json({ success: false, error: errors.array() });
+    } else {
+      try {
+        const newProduct = req.body;
+        const createdProduct = await Product.create(newProduct); //added to db
+        res.status(200).json({
+          createdProduct,
+          success: true,
+          message: 'Product successfully created',
+        });
+      } catch (error) {
+        debug(error);
+        res.status(400).json({
+          success: false,
+          message: `Product not created - Error: ${error.message}`,
+        });
+      }
+    }
+  };
   }
 };
 
