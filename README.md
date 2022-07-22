@@ -11,7 +11,7 @@ A CRUD operated inventory that displays a current list of cats borrowed from the
 - [Technologies](#technologies)
 - [Setup](#setup)
 - [Features](#features)
-- [Contact](#contact)
+
 
 ---
 
